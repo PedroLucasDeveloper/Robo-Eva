@@ -1,0 +1,98 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+  }
+  .eve{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .head{
+    width: 100px;
+    height: 60px;
+    border: 8px solid #fff;
+    border-radius: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .eye{
+    width: 36px;
+    height: 18px;
+    border-radius: 70%;
+    margin: 5px;
+    background-color: rgb(0, 255, 233);
+    box-shadow: 0 0 5px 5px rgba(0, 255, 233, 0.1);
+  }
+  .trunk{
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .arm{
+    width: 32px;
+    height: 120px;
+    border-radius: 60%;
+    background-color: #fff;
+  }
+  .chest{
+    width: 105px;
+    height: 160px;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #fff;
+  }
+  .shadow{
+    width: 100px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #111;
+    opacity: 0.5;
+  }
+  .rotate-left{
+    transform: rotate(15deg);
+  }
+  .rotate-right{
+    transform: rotate(-15deg);
+  }
+  @keyframes shadow{
+    100%{
+      transform: scaleX(1.2);
+    }
+  }
+  @keyframes up{
+    100%{
+      transform: translateY(-25px);
+    }
+  }
+  @keyframes arm-left{
+    100%{
+      transform: rotate(25deg);
+    }
+  }
+  @keyframes arm-right{
+    100%{
+      transform: rotate(-25deg);
+    }
+  }
+  .eve{
+    animation: up 0.4s ease-in-out infinite alternate;
+  }
+  .arm-left{
+    animation: arm-left 0.4s ease-in-out infinite alternate;
+  }
+  .arm-right{
+    animation: arm-right 0.4s ease-in-out infinite alternate;
+  }
+  .shadow{
+    animation: shadow 0.4s ease-in-out infinite alternate;
+  }
