@@ -21,6 +21,21 @@
          </div> 
         </div> 
         <div class="shadow"></div> 
-       </div> 
+    </div> 
+    <script>
+        function updateEyeColor() {
+            const eyeLeft = document.getElementsByClassName('eye rotate-left')[0];
+            const eyeRight = document.getElementsByClassName('eye rotate-right')[0];
+            const currentHour = new Date().getHours();
+
+            if (currentHour >= 18 && currentHour <= 6) {
+                //Olhos vermelhos durante a noite
+                eyeLeft.style.backgroundColor = 'red';
+                eyeRight.style.backgroundColor = 'red';
+            }
+        }
+
+        updateEyeColor();
+    </script>
 </body>
 </html>
